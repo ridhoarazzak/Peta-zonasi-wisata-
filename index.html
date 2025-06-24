@@ -16,18 +16,44 @@
       top: 10px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       padding: 8px 16px;
       font-weight: bold;
       font-size: 18px;
       z-index: 1000;
       border-radius: 6px;
     }
+
+    .legend {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    .legend i {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      vertical-align: middle;
+      border: 1px solid #999;
+    }
   </style>
 </head>
 <body>
   <div class="title">Peta Zonasi Potensi Wisata Lubuk Gadang Selatan</div>
   <div id="map"></div>
+
+  <div class="legend">
+    <div><i style="background: green;"></i> Potensi</div>
+    <div><i style="background: yellow;"></i> Potensi Sedang</div>
+    <div><i style="background: red;"></i> Tidak Potensi</div>
+  </div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
